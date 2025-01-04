@@ -80,7 +80,7 @@ const AboutUs = () => {
               >
                 <h2 className="text-5xl font-bold text-text-light dark:text-text-dark mb-6">
                   How Did We
-                  <span className="text-accent block mt-2">Get Here</span>
+                  <span className="text-accent block mt-2">Get Here?</span>
                 </h2>
               </motion.div>
               
