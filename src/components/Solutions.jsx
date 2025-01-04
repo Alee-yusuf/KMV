@@ -8,9 +8,9 @@ const Solutions = () => {
     {
       title: 'Telesales',
       description:
-        "We specialize in telesales for industries like Spectrum Online Sales, Dispatch, and Online Gaming. Our services combine advanced CRM systems and data-driven strategies to engage customers, boost sales, and drive loyalty.",
+        "At KMV Enterprises, we pride ourselves on being trailblazers in the TeleSales industry. Backed by a team of highly skilled professionals, we excel in managing complex sales projects across diverse sectors, including carrier logistics, cable, internet, phone services, and electronic commodities.",
       icon: '📞',
-      features: ['Advanced CRM Systems', 'Data-Driven Strategies', 'Customer Engagement'],
+      features: ['Cutting-Edge CRM Systems: Streamlining operations for peak efficiency and seamless customer management.', 'Data-Driven Strategies: Leveraging analytics to unlock insights and drive measurable results.', 'Customer Engagement Excellence: Building meaningful connections to foster loyalty and satisfaction.', ],
     },
     {
       title: 'Billing Services',
