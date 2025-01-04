@@ -10,13 +10,13 @@ const AboutUs = () => {
 
   const stats = [
     { 
-      number: '10+', 
+      number: '3+', 
       label: 'Years Experience',
       icon: <Users className="w-8 h-8" />,
       description: 'Pioneering excellence in technology'
     },
     { 
-      number: '200+', 
+      number: '7+', 
       label: 'Projects Completed',
       icon: <Target className="w-8 h-8" />,
       description: 'Delivering impactful solutions'
@@ -28,8 +28,8 @@ const AboutUs = () => {
       description: 'Innovative minds at work'
     },
     { 
-      number: '95%', 
-      label: 'Client Satisfaction',
+      number: '1M+', 
+      label: 'Client Served',
       icon: <TrendingUp className="w-8 h-8" />,
       description: 'Building lasting partnerships'
     },
