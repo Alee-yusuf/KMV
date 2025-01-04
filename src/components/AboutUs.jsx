@@ -79,14 +79,9 @@ const AboutUs = () => {
                 transition={{ delay: 0.3 }}
               >
                 <h2 className="text-5xl font-bold text-text-light dark:text-text-dark mb-6">
-                  Transforming
-                  <span className="text-accent block mt-2">Business Vision</span>
-                  Into Reality
+                  How Did We
+                  <span className="text-accent block mt-2">Get Here</span>
                 </h2>
-                <p className="text-muted-light dark:text-text-dark text-lg leading-relaxed">
-                  We bring innovative solutions that drive growth and create lasting impact. 
-                  Partner with us to unlock your business potential.
-                </p>
               </motion.div>
               
               <motion.div 
