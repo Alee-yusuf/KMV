@@ -43,7 +43,7 @@ const EnhancedHero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Transform your business with our expert consulting services. We deliver data-driven strategies and innovative solutions to drive your success.
+            Your one-stop shop for building connections that build wealth. Scroll down and feel your net worth climb with every click!
           </motion.p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Link to="about-us" smooth={true} duration={500} offset={-80}>
