@@ -35,7 +35,7 @@ const EnhancedHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Strategic <span className="text-accent">Consulting</span> Solutions
+            <span className="text-accent">Where</span> Wisdom Meets <span className="text-accent">Need</span>
           </motion.h1>
           <motion.p
             className="text-lg text-muted-light dark:text-muted-dark mb-8"
