@@ -11,27 +11,21 @@ const Solutions = () => {
         "At KMV Enterprises, we pride ourselves on being trailblazers in the TeleSales industry. Backed by a team of highly skilled professionals, we excel in managing complex sales projects across diverse sectors, including carrier logistics, cable, internet, phone services, and electronic commodities.",
       icon: '📞',
       features: ['Cutting-Edge CRM Systems: Streamlining operations for peak efficiency and seamless customer management.', 'Data-Driven Strategies: Leveraging analytics to unlock insights and drive measurable results.', 'Customer Engagement Excellence: Building meaningful connections to foster loyalty and satisfaction.', ],
-      description:
-        "With our innovative approach and commitment to excellence, KMV Enterprises transforms challenges into opportunities, delivering unparalleled value to our clients.",
-    },
+      },
     {
       title: 'Customer Support',
     description:
         "KMV is renowned for its innovative and customer-centric support solutions. Our support executives are true masters of their craft, honing their skills through extensive experience serving over a million customers across industries such as gaming, finance, and social media.",
       icon: '🎧',
       features: ['Unmatched Expertise: Decades of combined experience across diverse industries.', 'Customer-First Approach: Personalized solutions tailored to meet unique client needs.', 'Proven Track Record: Delivering exceptional support that fosters trust and loyalty.', ],
-      description:
-        "At KMV, we don’t just provide customer support – we redefine it, ensuring seamless experiences that exceed expectations.",
-    },
+      },
     {
       title: 'Cryptocurrency & Forex Trading',
       description:
         "KMV operates as a premier investment firm, leveraging the expertise of our accomplished trading specialists to optimize capital allocation in cryptocurrency and forex markets. Through rigorous market analysis and precise strategies, we design tailored investment pathways that maximize returns while mitigating risk.",
       icon: '💹',
       features: ['Strategic cryptocurrency asset management', 'Sophisticated forex market strategies', 'Advanced risk mitigation frameworks', 'Real-time market intelligence integration', ],
-      description:
-        "Entrust KMV with your investments, where innovation meets mastery in capital growth.",
-    },
+      },
   ];
 
   return (
