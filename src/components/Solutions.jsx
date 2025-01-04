@@ -15,6 +15,7 @@ const Solutions = () => {
         "With our innovative approach and commitment to excellence, KMV Enterprises transforms challenges into opportunities, delivering unparalleled value to our clients.",
     },
     {
+      title: 'Customer Support',
     description:
         "KMV is renowned for its innovative and customer-centric support solutions. Our support executives are true masters of their craft, honing their skills through extensive experience serving over a million customers across industries such as gaming, finance, and social media.",
       icon: '🎧',
