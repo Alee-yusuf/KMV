@@ -11,14 +11,24 @@ const Solutions = () => {
         "At KMV Enterprises, we pride ourselves on being trailblazers in the TeleSales industry. Backed by a team of highly skilled professionals, we excel in managing complex sales projects across diverse sectors, including carrier logistics, cable, internet, phone services, and electronic commodities.",
       icon: '📞',
       features: ['Cutting-Edge CRM Systems: Streamlining operations for peak efficiency and seamless customer management.', 'Data-Driven Strategies: Leveraging analytics to unlock insights and drive measurable results.', 'Customer Engagement Excellence: Building meaningful connections to foster loyalty and satisfaction.', ],
+      description:
+        "With our innovative approach and commitment to excellence, KMV Enterprises transforms challenges into opportunities, delivering unparalleled value to our clients.",
     },
     {
-      title: 'Billing Services',
-      description:
-        "KMV offers expert billing solutions for Medical and Internet Billing. Our medical billing service ensures accurate claim processing, timely payments, and full regulatory compliance.",
-      icon: '💳',
-      features: ['Accurate Claim Processing', 'Regulatory Compliance', 'Scalable Transaction Management'],
-    },
+  title: 'Customer Support Services',
+  description:
+    "KMV is renowned for its innovative and customer-centric support solutions. Our support executives are true masters of their craft, honing their skills through extensive experience serving over a million customers across industries such as gaming, finance, and social media.\n\n" +
+    "Unmatched Expertise: Decades of combined experience across diverse industries.\n" +
+    "Customer-First Approach: Personalized solutions tailored to meet unique client needs.\n" +
+    "Proven Track Record: Delivering exceptional support that fosters trust and loyalty.\n\n" +
+    "At KMV, we don’t just provide customer support – we redefine it, ensuring seamless experiences that exceed expectations.",
+  icon: '🎧',
+  features: [
+    'Unmatched Expertise in Multiple Industries',
+    'Customer-First Support with Personalized Solutions',
+    'Proven Track Record of Trust and Loyalty'
+  ],
+}
     {
       title: 'Cryptocurrency & Forex Trading',
       description:
