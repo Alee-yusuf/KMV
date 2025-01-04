@@ -15,26 +15,21 @@ const Solutions = () => {
         "With our innovative approach and commitment to excellence, KMV Enterprises transforms challenges into opportunities, delivering unparalleled value to our clients.",
     },
     {
-  title: 'Customer Support Services',
-  description:
-    "KMV is renowned for its innovative and customer-centric support solutions. Our support executives are true masters of their craft, honing their skills through extensive experience serving over a million customers across industries such as gaming, finance, and social media.\n\n" +
-    "Unmatched Expertise: Decades of combined experience across diverse industries.\n" +
-    "Customer-First Approach: Personalized solutions tailored to meet unique client needs.\n" +
-    "Proven Track Record: Delivering exceptional support that fosters trust and loyalty.\n\n" +
-    "At KMV, we don’t just provide customer support – we redefine it, ensuring seamless experiences that exceed expectations.",
-  icon: '🎧',
-  features: [
-    'Unmatched Expertise in Multiple Industries',
-    'Customer-First Support with Personalized Solutions',
-    'Proven Track Record of Trust and Loyalty'
-  ],
-}
+    description:
+        "KMV is renowned for its innovative and customer-centric support solutions. Our support executives are true masters of their craft, honing their skills through extensive experience serving over a million customers across industries such as gaming, finance, and social media.",
+      icon: '🎧',
+      features: ['Unmatched Expertise: Decades of combined experience across diverse industries.', 'Customer-First Approach: Personalized solutions tailored to meet unique client needs.', 'Proven Track Record: Delivering exceptional support that fosters trust and loyalty.', ],
+      description:
+        "At KMV, we don’t just provide customer support – we redefine it, ensuring seamless experiences that exceed expectations.",
+    },
     {
       title: 'Cryptocurrency & Forex Trading',
       description:
-        "Navigating the world of cryptocurrency and forex can be complex, but KMV makes it simple. We provide you with real-time market insights, advanced trading tools, and personalized strategies.",
+        "KMV operates as a premier investment firm, leveraging the expertise of our accomplished trading specialists to optimize capital allocation in cryptocurrency and forex markets. Through rigorous market analysis and precise strategies, we design tailored investment pathways that maximize returns while mitigating risk.",
       icon: '💹',
-      features: ['Real-Time Market Insights', 'Advanced Trading Tools', 'Personalized Strategies'],
+      features: ['Strategic cryptocurrency asset management', 'Sophisticated forex market strategies', 'Advanced risk mitigation frameworks', 'Real-time market intelligence integration', ],
+      description:
+        "Entrust KMV with your investments, where innovation meets mastery in capital growth.",
     },
   ];
 
