@@ -83,113 +83,131 @@ const OurTeam = () => {
     }
   };
 
-  const ProfileModal = ({ member, onClose }) => (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-      onClick={onClose}
-    >
+  const ProfileModal = ({ member, onClose }) => {
+    // Handle background click
+    const handleBackgroundClick = (e) => {
+      if (e.target === e.currentTarget) {
+        onClose();
+      }
+    };
+
+    // Handle close button click with stopPropagation
+    const handleCloseClick = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      onClose();
+    };
+
+    return (
       <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0 }}
-        className="bg-white dark:bg-primary-dark rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
-        onClick={e => e.stopPropagation()}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        onClick={handleBackgroundClick}
       >
-        <div className="relative">
-          <button
-            onClick={onClose}
-            className="absolute right-0 top-0 p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full"
-          >
-            <CloseIcon className="w-6 h-6" />
-          </button>
-          
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="w-full md:w-1/3">
-              <motion.div
-                className="relative rounded-xl overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full aspect-square object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              </motion.div>
-              
-              <div className="flex justify-center gap-4 mt-4">
-                <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-                  className="p-2 bg-accent/10 hover:bg-accent/20 rounded-full text-accent">
-                  <Linkedin className="w-5 h-5" />
-                </motion.a>
-                <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-                  className="p-2 bg-accent/10 hover:bg-accent/20 rounded-full text-accent">
-                  <Twitter className="w-5 h-5" />
-                </motion.a>
-                <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-                  className="p-2 bg-accent/10 hover:bg-accent/20 rounded-full text-accent">
-                  <Mail className="w-5 h-5" />
-                </motion.a>
-              </div>
-            </div>
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.8, opacity: 0 }}
+          className="bg-white dark:bg-primary-dark rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="relative">
+            <motion.button
+              onClick={handleCloseClick}
+              whileTap={{ scale: 0.95 }}
+              className="absolute right-0 top-0 p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full z-10 touch-none"
+              style={{ touchAction: 'none' }}
+            >
+              <CloseIcon className="w-6 h-6" />
+            </motion.button>
             
-            <div className="w-full md:w-2/3">
-              <h3 className="text-3xl font-bold text-text-light dark:text-text-dark">
-                {member.name}
-              </h3>
-              <p className="text-accent text-xl mb-4">{member.role}</p>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                    <Trophy className="w-5 h-5 text-accent" />
-                    Key Achievements
-                  </h4>
-                  <ul className="space-y-2">
-                    {member.achievements.map((achievement, i) => (
-                      <motion.li
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="flex items-center gap-2 text-muted-light dark:text-text-dark/80"
-                      >
-                        <Star className="w-4 h-4 text-accent" />
-                        {achievement}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="flex flex-col md:flex-row gap-6 pt-8 md:pt-0">
+              <div className="w-full md:w-1/3">
+                <motion.div
+                  className="relative rounded-xl overflow-hidden"
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full aspect-square object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                </motion.div>
                 
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                    <Award className="w-5 h-5 text-accent" />
-                    Core Skills
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {member.skills.map((skill, i) => (
-                      <motion.span
-                        key={i}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm"
-                      >
-                        {skill}
-                      </motion.span>
-                    ))}
+                <div className="flex justify-center gap-4 mt-4">
+                  <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
+                    className="p-2 bg-accent/10 hover:bg-accent/20 rounded-full text-accent">
+                    <Linkedin className="w-5 h-5" />
+                  </motion.a>
+                  <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
+                    className="p-2 bg-accent/10 hover:bg-accent/20 rounded-full text-accent">
+                    <Twitter className="w-5 h-5" />
+                  </motion.a>
+                  <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
+                    className="p-2 bg-accent/10 hover:bg-accent/20 rounded-full text-accent">
+                    <Mail className="w-5 h-5" />
+                  </motion.a>
+                </div>
+              </div>
+              
+              <div className="w-full md:w-2/3">
+                <h3 className="text-3xl font-bold text-text-light dark:text-text-dark">
+                  {member.name}
+                </h3>
+                <p className="text-accent text-xl mb-4">{member.role}</p>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                      <Trophy className="w-5 h-5 text-accent" />
+                      Key Achievements
+                    </h4>
+                    <ul className="space-y-2">
+                      {member.achievements.map((achievement, i) => (
+                        <motion.li
+                          key={i}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: i * 0.1 }}
+                          className="flex items-center gap-2 text-muted-light dark:text-text-dark/80"
+                        >
+                          <Star className="w-4 h-4 text-accent" />
+                          {achievement}
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                      <Award className="w-5 h-5 text-accent" />
+                      Core Skills
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {member.skills.map((skill, i) => (
+                        <motion.span
+                          key={i}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: i * 0.1 }}
+                          className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm"
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
-  );
+    );
+  };
 
   return (
     <section
