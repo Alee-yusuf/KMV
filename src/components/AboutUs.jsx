@@ -17,7 +17,7 @@ const AboutUs = () => {
     },
     { 
       number: '7+', 
-      label: 'Projects Completed',
+      label: 'Ongoing Projects',
       icon: <Target className="w-8 h-8" />,
       description: 'Delivering impactful solutions'
     },
