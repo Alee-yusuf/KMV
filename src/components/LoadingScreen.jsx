@@ -3,32 +3,12 @@ import { motion } from "framer-motion";
 import logo from "../assets/images/kmv-logo.png";
 
 const LoadingScreen = ({ onLoadingComplete }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadingText, setLoadingText] = useState("Initializing");
-
   useEffect(() => {
-    const messages = [
-      "Innovating Business Solutions",
-      "Driving Strategic Growth",
-      "Transforming Challenges",
-      "Delivering Excellence"
-    ];
-    
-    let messageIndex = 0;
-    const messageInterval = setInterval(() => {
-      messageIndex = (messageIndex + 1) % messages.length;
-      setLoadingText(messages[messageIndex]);
-    }, 800);
-
     const timer = setTimeout(() => {
-      setIsLoading(false);
       onLoadingComplete();
     }, 4000);
 
-    return () => {
-      clearInterval(messageInterval);
-      clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
   return (
@@ -48,7 +28,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
             scale: [0, 1],
             rotate: [0, position.includes('right') ? 90 : -90]
           }}
-          transition={{ duration: 1, delay: i * 0.2 }}
+          transition={{ duration: 1.5, delay: i * 0.3, ease: "easeInOut" }}
         >
           <motion.div 
             className="w-full h-full border-4 border-primary/20"
@@ -77,9 +57,9 @@ const LoadingScreen = ({ onLoadingComplete }) => {
             rotate: 360
           }}
           transition={{
-            duration: 10 + Math.random() * 10,
+            duration: 15 + Math.random() * 10,
             repeat: Infinity,
-            ease: "linear"
+            ease: "easeInOut"
           }}
         >
           <motion.div
@@ -93,7 +73,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
               opacity: [0.1, 0.3, 0.1]
             }}
             transition={{
-              duration: 3,
+              duration: 4,
               repeat: Infinity,
               ease: "easeInOut"
             }}
@@ -112,9 +92,9 @@ const LoadingScreen = ({ onLoadingComplete }) => {
               x: ['-100%', '100%']
             }}
             transition={{
-              duration: 3 + i,
+              duration: 5 + i,
               repeat: Infinity,
-              ease: "linear"
+              ease: "easeInOut"
             }}
           />
         ))}
@@ -125,12 +105,12 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         className="relative z-10"
         initial={{ scale: 0.2, opacity: 0 }}
         animate={{
-          scale: [0.2, 1.2, 1],
+          scale: [0.2, 1.2, 1.5],
           opacity: 1,
         }}
         transition={{
-          duration: 1.5,
-          ease: "easeOut",
+          duration: 4,
+          ease: "easeInOut",
         }}
       >
         {/* Logo */}
@@ -149,40 +129,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         />
       </motion.div>
 
-      {/* Dynamic Text Container */}
-      <motion.div
-        className="mt-8 relative"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        {/* Moving Line Under Text */}
-        <motion.div
-          className="absolute -bottom-2 left-0 right-0 h-px bg-primary/20"
-          animate={{
-            scaleX: [0, 1, 0],
-            x: ['-100%', '0%', '100%']
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.p
-          className="text-xl font-bold text-primary relative z-10"
-          animate={{ opacity: [0.7, 1, 0.7] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          {loadingText}
-        </motion.p>
-      </motion.div>
-
-      {/* Advanced Progress Bar */}
+      {/* Progress Bar */}
       <div className="mt-8 relative">
         <motion.div
           className="w-64 h-1.5 bg-primary/10 rounded-full overflow-hidden"
@@ -209,8 +156,8 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                 opacity: [0.3, 1, 0.3],
               }}
               transition={{
-                duration: 1,
-                delay: i * 0.2,
+                duration: 1.5,
+                delay: i * 0.3,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -224,22 +171,22 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         <motion.div
           className="absolute top-0 left-0 w-16 h-px bg-primary/20"
           animate={{ scaleX: [0, 1], originX: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute top-0 left-0 w-px h-16 bg-primary/20"
           animate={{ scaleY: [0, 1], originY: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute top-0 right-0 w-16 h-px bg-primary/20"
           animate={{ scaleX: [0, 1], originX: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute top-0 right-0 w-px h-16 bg-primary/20"
           animate={{ scaleY: [0, 1], originY: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         />
       </div>
     </motion.div>
