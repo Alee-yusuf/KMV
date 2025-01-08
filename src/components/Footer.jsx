@@ -91,13 +91,13 @@ const Footer = () => {
           <div className="w-full md:w-auto text-center md:text-left">
             <div className="space-y-2">
               <p className="text-sm font-medium text-text-light dark:text-text-dark">
-                1234 Street Name, City, Country
+                Old Airport Building, 69 Abid Majeed Rd, Cantonment, Lahore, Punjab 54000, Pakistan
               </p>
               <p className="text-sm text-muted-light dark:text-text-dark/80">
                 contact@kmventerprises.com
               </p>
               <p className="text-sm text-muted-light dark:text-text-dark/80">
-                +1 (555) 123-4567
+                +92 327 1192722
               </p>
             </div>
           </div>
@@ -106,7 +106,6 @@ const Footer = () => {
           <div className="w-full md:w-auto flex justify-center md:justify-end space-x-6">
             {[
               { Icon: FaFacebook, label: "Facebook", href: "https://facebook.com" },
-              { Icon: FaTwitter, label: "Twitter", href: "https://twitter.com" },
               { Icon: FaInstagram, label: "Instagram", href: "https://instagram.com" },
               { Icon: FaLinkedin, label: "LinkedIn", href: "https://linkedin.com" }
             ].map(({ Icon, label, href }) => (
